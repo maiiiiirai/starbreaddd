@@ -1,0 +1,159 @@
+body {
+    background: url("wallpaper-stars.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+/* Perfect Centering */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    padding: 100px;
+}
+
+/* Floating Christmas Icons */
+.floating-icon {
+    position: absolute;
+    opacity: 0.35;
+    animation: float 6s ease-in-out infinite;
+    z-index: 2;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+
+/* Scattered positions */
+.floating-icon:nth-of-type(1) { top: 8%; left: 5%; animation-delay: 0s; }
+.floating-icon:nth-of-type(2) { top: 15%; right: 8%; animation-delay: 1s; }
+.floating-icon:nth-of-type(3) { top: 30%; left: 12%; animation-delay: 2s; }
+.floating-icon:nth-of-type(4) { top: 45%; right: 10%; animation-delay: 3s; }
+.floating-icon:nth-of-type(5) { top: 60%; left: 8%; animation-delay: 4s; }
+.floating-icon:nth-of-type(6) { top: 70%; right: 6%; animation-delay: 2.5s; }
+.floating-icon:nth-of-type(7) { top: 20%; left: 30%; animation-delay: 1.5s; }
+.floating-icon:nth-of-type(8) { top: 55%; right: 30%; animation-delay: 0.5s; }
+.floating-icon:nth-of-type(9) { top: 80%; left: 20%; animation-delay: 3.5s; }
+.floating-icon:nth-of-type(10) { top: 85%; right: 22%; animation-delay: 4.5s; }
+
+
+
+/* Login Card */
+.login-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 32px;
+    border-radius: 16px;
+    border: 3px solid #dd3405;
+    box-shadow: 0 0 20px rgba(221, 52, 5, 0.25); /* soft red glow */
+    position: relative;
+    z-index: 10; /* stay above cookies */
+}
+
+/* Title + Subtitle */
+.login-title {
+    color: #ff3c0c; 
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.login-subtitle {
+    color:#ff3c0c; 
+    margin-top: 6px;
+    font-size: 0.9rem;
+}
+
+/* Labels */
+.login-label {
+    color: #b30000;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* Input Fields */
+.login-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ffcccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.login-input:focus {
+    border-color: #b30000;
+    box-shadow: 0 0 5px rgba(179, 0, 0, 0.4);
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #b30000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-btn:hover {
+    opacity: 0.9;
+}
+
+/* Forgot password link */
+.forgot-link {
+    color:#ff3c0c; /* red for consistency */
+    font-size: 0.85rem;
+}
+
+/* BIG & Visible Snowflakes */
+.snowflake {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 2.5rem;
+    opacity: 0.9;
+    animation: fall 7s linear infinite;
+    z-index: 9999;
+    user-select: none;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(-20px) translateY(55vh) rotate(180deg);
+    }
+    100% {
+        transform: translateX(20px) translateY(110vh) rotate(360deg);
+    }
+}
+
+/* Floating Cookies */
+.cookie-float {
+    position: fixed;
+    top: 0;
+    z-index: -1; /* put behind the login card */
+    pointer-events: none;
+    opacity: 0.9;
+    animation: floatSide 6s ease-in-out infinite alternate;
+}
+
+
+@keyframes floatSide {
+    0% { transform: translateX(-30px) translateY(0); }
+    100% { transform: translateX(30px) translateY(0); }
+}
