@@ -16,6 +16,11 @@
                 <a href="../pages/sales-page.php" id="nav-sales" class="nav-link px-4 py-2 rounded-lg font-medium transition-colors duration-200 text-white hover:bg-white hover:text-amber-800">
                     Sales
                 </a>
+                <form action="../../../backend/auth/logout.php" method="POST" style="display: inline;">
+                    <button type="submit" class="nav-link px-4 py-2 rounded-lg font-medium transition-colors duration-200 hover:bg-white hover:text-amber-800">
+                        Logout
+                    </button>
+                </form>
             </nav>
         </div>
     </div>
